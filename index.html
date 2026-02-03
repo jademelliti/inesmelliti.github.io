@@ -1,0 +1,294 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade Melliti's Home Page - Portfolio</title>
+    <style>
+        :root {
+    --main-green: #2ecc71;
+    --dark-green: #27ae60;
+    --light-green: #a5df89;
+    --black: #121212;
+    --white: #f5f5f5;
+    --beige: #fefee2; 
+}
+
+body {
+    background-color: var(--beige);
+    color: var(--black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
+
+header {
+text-align: center;
+margin-bottom: 3rem;
+border-bottom: 2px solid var(--main-green);
+padding-bottom: 1.5rem;
+}
+
+h1 {
+    color: var(--main-green);
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: var(--light-green);
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.schoolprojects {
+    margin-top: 2rem;
+}
+
+.schoolprojects h3 {
+    color: var(--light-green);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--light-green);
+    padding-bottom: 0.5rem;
+}
+
+.schoolproject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schoolproject-list li {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--main-green);
+    transition: all 0.3s ease; 
+}
+
+
+.internshipprojects {
+    margin-top: 2rem;
+}
+
+.internshipprojects h4{
+    color: var(--light-green);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--light-green);
+    padding-bottom: 0.5rem;
+}
+
+.internshipproject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.internshipproject-list li {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--main-green);
+    transition: all 0.3s ease; 
+}
+
+
+.personalprojects {
+    margin-top: 2rem;
+}
+
+.personalprojects h5{
+    color: var(--light-green);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--light-green);
+    padding-bottom: 0.5rem;
+}
+
+.personalproject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.personalproject-list li {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left: 4px solid var(--main-green);
+    transition: all 0.3s ease; 
+}
+
+.project-list li:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+    /* Correction : transform translate5px n'existe pas */
+    transform: translateX(5px);
+}
+
+/* Styles des liens dans toutes les listes de projets */
+.school-project-list a,
+.internship-project-list a,
+.personal-project-list a {
+    color: var(--black) !important;        /* Blanc par défaut */
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.school-project-list a:visited,
+.internship-project-list a:visited,
+.personal-project-list a:visited {
+    color: var(--main-green) !important;   /* Vert quand visité */
+}
+
+.school-project-list a:hover,
+    .internship-project-list a:hover,
+    .personal-project-list a:hover {
+        text-decoration: underline;
+        color: var(--main-green) !important;
+
+
+    .school-project-list,
+    .internship-project-list,
+    .personal-project-list {
+    list-style-type: none;
+    padding-left: 1.2em;
+    }
+
+.school-project-list li::before,
+.internship-project-list li::before,
+.personal-project-list li::before {
+    content: "▶";          /* Le petit triangle */
+    color: var(--main-green);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.school-project-list,
+.internship-project-list,
+.personal-project-list {
+    list-style-type: none;
+    padding-left: 1.2em;
+}
+
+
+    /* Ajout d'une transition pour un effet plus doux */}
+
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: var(--black);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--dark-green);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jade Melliti</h1>
+            <h2>Engineering student</h2>
+        </header>
+       
+        <section class="description">
+            <p>
+                I'm passionate about mathematics and computing and I'm currently studying engineering. 
+                I enjoy taking on technical challenges and learning new skills. 
+                My aim is to contribute to innovative projects and improve my knowledge of programming and software development.
+            </p>
+        </section>
+       
+        <section class="schoolprojects">
+            <h3>My school projects</h3>
+            <ul class="school-project-list">
+                <li>
+                    <a href="https://github.com/jademelliti/IA_embarquee" target="_blank">
+                        <strong>Embedded artificial intelligence</strong> - In my second year, I contributed to a project aimed at discovering embedded artificial intelligence.
+                        This project enabled me to develop skills in Python programming and machine learning, while deepening my understanding of embedded systems.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jademelliti/pipeline_RISCV" target="_blank">
+                        <strong>PIPELINE_RISCV</strong> - This project involves the design of a pipelined RISC-V processor (RV32I architecture) in SystemVerilog, featuring hazard management and cache implementation. 
+                        Developed as part of a processor architecture course, it aims to master pipeline optimization techniques and cache memory systems.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jademelliti/FPGA" target="_blank">
+                        <strong>FPGA</strong> - This SystemVerilog project implements the Ascon encryption algorithm on FPGA for secure ECG data transmission, 
+                        with Python-based decryption and biomedical signal analysis (BPM detection).
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="internshipprojects">
+            <h4>My internship projects</h4>
+            <ul class="internship-project-list">
+                <li>
+                    <a href="https://github.com/jademelliti/Schrodinger_equation" target="_blank">
+                        <strong>Solver to solve stationary Schrodinger</strong> - Use of mathematical approximations and tridiagonal matrices to approximate the Hamiltonian operator.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jademelliti/Anderson-Localization" target="_blank">
+                        <strong>Anderson's localization model</strong> -Mathematical study of Anderson's localization model.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/jademelliti/Kubo_Greenwood_Conductivity" target="_blank">
+                        <strong>Kubo-Greenwood conductivity</strong> - Kubo's formula and its application to the study of the conductivity of a system.
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="personalprojects">
+            <h5>My personal projects</h5>
+            <ul class="personal-project-list">
+                <li>
+                    <a href="https://github.com/jademelliti/IA_embarquee" target="_blank">
+                        <strong>Embedded artificial intelligence</strong> - In my second year, I contributed to a project aimed at discovering embedded artificial intelligence.
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/[ton-username]/[projet2]" target="_blank">
+                        <strong>Projet 2</strong> - Description courte du deuxième projet
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/[ton-username]/[projet3]" target="_blank">
+                        <strong>Projet 3</strong> - Description courte du troisième projet
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+   
+    <footer>
+        &copy; <span id="year"></span> Jade Melliti - Tous droits réservés
+    </footer>
+
+    <script>
+        // Ajoute l'année actuelle automatiquement
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
